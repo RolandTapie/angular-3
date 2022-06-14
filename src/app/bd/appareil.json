@@ -1,0 +1,30 @@
+[
+  {
+    "nom": "televiseur",
+    "status": "éteint"
+  },
+  {
+    "nom": "ordinateur",
+    "status": "allumé"
+  },
+  {
+    "nom": "Four",
+    "status": "éteint"
+  },
+  {
+    "nom": "Refrigerateur",
+    "status": "allumé"
+  },
+  {
+    "nom": "Tapis de course",
+    "status": "éteint"
+  },
+  {
+    "nom": "Tondeuse",
+    "status": "allumé"
+  },
+  {
+    "nom": "Chargeurs",
+    "status": "éteint"
+  }
+]
