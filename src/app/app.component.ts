@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       resolve(date);
     }, 2000);
   });
-  name = 'Angular ' + VERSION.major;
+  name = 'Apprentissage Angular ' + VERSION.major;
   tps: boolean = false;
 
   constructor(private appareilService: AppareilService) {
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
       .getappareil()
       .subscribe((a) => (this.listapp = a));
 
-      console.log(this.listapp);
+    console.log(this.listapp);
   }
 
   Al() {
