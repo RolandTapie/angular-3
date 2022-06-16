@@ -16,6 +16,21 @@ export class AppareilComponent implements OnInit {
   @Input()
   indexOfAppareil: number;
 
+  public appareils = [
+    {
+      nom: 'tele',
+      status: 'allumé',
+    },
+    {
+      nom: 'ordi',
+      status: 'allumé',
+    },
+    {
+      nom: 'fourr',
+      status: 'allumé',
+    },
+  ];
+
   btn: boolean = false;
   ngOnInit() {}
 

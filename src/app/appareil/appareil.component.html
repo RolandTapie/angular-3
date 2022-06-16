@@ -5,6 +5,25 @@
     'list-group-item-danger': status === 'éteint'
   }"
 >
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ap of appareils">
+        <td> num appareil</td>
+        <td>{{ ap.nom }}</td>
+        <td>{{ ap.status }}</td>
+        <td><button class="btn btn-success">valider</button></td>
+      </tr>
+    </tbody>
+  </table>
+
   <div
     style="width:20px;height:20px;background-color:red;"
     *ngIf="status === 'éteint'"
