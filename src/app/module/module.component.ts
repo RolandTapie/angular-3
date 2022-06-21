@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ModuleComponent implements OnInit {
   @Input()
   nom: string = 'vide';
+  img: string ="img.png"
   constructor() {}
 
   ngOnInit() {}
