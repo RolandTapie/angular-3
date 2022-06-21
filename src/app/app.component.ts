@@ -12,6 +12,12 @@ export class AppComponent implements OnInit {
   maj = new Date();
   appareils: any[];
   listapp: app[];
+  modules: string[] = [
+    'Gestion des Coda',
+    'Inventaire Dette',
+    'Comptabilité',
+    'Autres',
+  ];
   prom = new Promise((resolve, rejected) => {
     const date = new Date();
     setTimeout(() => {

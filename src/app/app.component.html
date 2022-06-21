@@ -1,24 +1,48 @@
-<hello [nam]="name"></hello>
-
- <app-composant1></app-composant1>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div>
+      <div class="row">
+        <app-module *ngFor="let mod of modules" [nom]="mod"></app-module>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="row">
+      <div class="col col-xl-2">
+        <ul class="list-group">
+          <li *ngFor="let mod of modules"> {{ mod }}</li>
+        </ul>
+      </div>
+      <div class="col col-xl-9">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>Date de mise à jour : {{ maj | date }}</p>
+            <h2>Les appareils</h2>
+            <button class="btn btn-success" (click)="Al()">Allumer tout</button>
+
+            <button class="btn btn-danger" (click)="Et()">Eteindre tout</button>
+
+            <ul class="list-group">
+              <app-appareil
+                *ngFor="let app of this.appareils; let i = index"
+                [name]="app.nom"
+                [status]="app.status"
+                [indexOfAppareil]="i"
+              ></app-appareil>
+            </ul>
+            <button class="btn btn-danger" [disabled]="!tps">
+              Etat général
+            </button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col col-xl-1">ACTIONS</div>
+    </div>
+  </div>
+  <div class="row">
+    <div>
       <p>Date de mise à jour : {{ maj | date }}</p>
-      <h2>Les appareils</h2>
-      <button class="btn btn-success" (click)="Al()">Allumer tout</button>
-
-      <button class="btn btn-danger" (click)="Et()">Eteindre tout</button>
-
-      <ul class="list-group">
-        <app-appareil
-          *ngFor="let app of this.appareils; let i = index"
-          [name]="app.nom"
-          [status]="app.status"
-          [indexOfAppareil]="i"
-        ></app-appareil>
-      </ul>
-      <button class="btn btn-danger" [disabled]="!tps">Etat général</button>
     </div>
   </div>
 </div>
